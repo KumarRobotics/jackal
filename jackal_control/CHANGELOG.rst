@@ -2,6 +2,82 @@
 Changelog for package jackal_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.8 (2023-06-05)
+------------------
+
+0.8.7 (2023-04-19)
+------------------
+
+0.8.6 (2022-11-16)
+------------------
+
+0.8.5 (2022-05-17)
+------------------
+
+0.8.4 (2022-05-09)
+------------------
+* Disable absolute yaw in default imu configuration
+* Set subst_value=true when loading the control_extras file to allow envar-defined configuration inside the file
+* Contributors: Chris I-B, Chris Iverach-Brereton
+
+0.8.3 (2022-03-08)
+------------------
+
+0.8.2 (2022-02-15)
+------------------
+* Updated control.launch to new microstrain envvars and moved definition of ekf-localization paramaters into it
+* Added Microstrain GX5 to jackal_control
+* Contributors: Luis Camero
+
+0.8.1 (2022-01-18)
+------------------
+* predict odom->base_link tf to current time
+* Contributors: Ebrahim Shahrivar
+
+0.8.0 (2021-04-23)
+------------------
+* Merge branch 'noetic-devel-bkup' into noetic-devel
+* Fix the link_name parameter for the interactive marker server; the default for the package includes a leading '/', which prevents the markers from working on Noetic.  We can revert this if/when the default for interactive_marker_twist_server is modified.
+* Contributors: Chris Iverach-Brereton
+
+0.7.5 (2021-03-24)
+------------------
+
+0.7.4 (2021-03-16)
+------------------
+* Bumped CMake version to avoid author warning.
+* Add the JACKAL_JOY_DEVICE envar to optionally override the joy device more easily.
+* Contributors: Chris Iverach-Brereton, Tony Baltovski
+
+0.7.3 (2021-03-08)
+------------------
+
+0.7.2 (2020-09-29)
+------------------
+* Load the control extras last (`#75 <https://github.com/jackal/jackal/issues/75>`_)
+* Remove the PS4 device from the yaml file, always apply the parameter from the joy_dev argument instead (`#73 <https://github.com/jackal/jackal/issues/73>`_)
+* Contributors: Chris I-B
+
+0.7.1 (2020-08-24)
+------------------
+* Disable ekf option (`#71 <https://github.com/jackal/jackal/issues/71>`_)
+  * added env var and if-statement to disable robot ekf
+  * changed if to unless
+  * clearer wording
+* Contributors: jmastrangelo-cpr
+
+0.7.0 (2020-04-20)
+------------------
+* Mark the PS3 controller launch file as deprecated, update the default joystick device to point to /dev/input/ps4, as per the new udev rules added to the bringup package
+* Contributors: Chris I-B
+
+0.6.4 (2020-03-04)
+------------------
+* Update control.launch
+  Somehow a ">" has gone missing. This change adds it back in.
+* [jackal_control] Added control extras.
+* Contributors: Jeff Schmidt, Tony Baltovski
+
 0.6.3 (2019-07-18)
 ------------------
 

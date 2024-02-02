@@ -2,6 +2,61 @@
 Changelog for package jackal_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.8 (2023-06-05)
+------------------
+
+0.8.7 (2023-04-19)
+------------------
+
+0.8.6 (2022-11-16)
+------------------
+
+0.8.5 (2022-05-17)
+------------------
+
+0.8.4 (2022-05-09)
+------------------
+
+0.8.3 (2022-03-08)
+------------------
+
+0.8.2 (2022-02-15)
+------------------
+
+0.8.1 (2022-01-18)
+------------------
+
+0.8.0 (2021-04-23)
+------------------
+
+0.7.5 (2021-03-24)
+------------------
+
+0.7.4 (2021-03-16)
+------------------
+* Bumped CMake version to avoid author warning.
+* Contributors: Tony Baltovski
+
+0.7.3 (2021-03-08)
+------------------
+
+0.7.2 (2020-09-29)
+------------------
+* Use the JACKAL_LASER_TOPIC env var as the default for the scan topic in amcl + gmapping demos (`#74 <https://github.com/jackal/jackal/issues/74>`_)
+* Contributors: Chris I-B
+
+0.7.1 (2020-08-24)
+------------------
+* Remove the leading / from the gmapping default scan topic
+* Expose the scan_topic and use_map_topic parameters in the demo launch files
+* Contributors: Chris Iverach-Brereton
+
+0.7.0 (2020-04-20)
+------------------
+
+0.6.4 (2020-03-04)
+------------------
+
 0.6.3 (2019-07-18)
 ------------------
 
