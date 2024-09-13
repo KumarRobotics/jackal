@@ -36,9 +36,9 @@ def generate_launch_description():
         output='screen',
         parameters=[analyzer_params_filepath])
     diag_publisher = Node(
-         package='jackal_robot',
-         executable='diagnostics_updater',
-         output='screen')
+        package='jackal_robot',
+        executable='diagnostics_updater',
+        output='screen')
     return launch.LaunchDescription([
         aggregator,
         diag_publisher,
