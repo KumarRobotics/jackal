@@ -167,7 +167,7 @@ class JackalDiagnosticsUpdater(Node):
         return stat
 
     def battery_diagnostics(self, stat):
-        vbat = self.measured_voltages[Power.JACKAL_MEASURED_BATTERY]
+        vbat = self.measured_voltages[Power.J100_MEASURED_BATTERY]
 
         if vbat > 30.0:
             stat.summary(DiagnosticStatus.ERROR, 'Battery overvoltage.')
@@ -184,8 +184,8 @@ class JackalDiagnosticsUpdater(Node):
         return stat
 
     def voltage_diagnostics(self, stat):
-        v5 = self.measured_voltages[Power.JACKAL_MEASURED_5V]
-        v12 = self.measured_voltages[Power.JACKAL_MEASURED_12V]
+        v5 = self.measured_voltages[Power.J100_MEASURED_5V]
+        v12 = self.measured_voltages[Power.J100_MEASURED_12V]
 
         if v12 > 12.5 or v5 > 5.5:
             stat.summary(DiagnosticStatus.ERROR, 'User supply overvoltage. Accessories may be damaged.')
@@ -201,10 +201,10 @@ class JackalDiagnosticsUpdater(Node):
         return stat
 
     def current_diagnostics(self, stat):
-        current_computer = self.measured_currents[Power.JACKAL_COMPUTER_CURRENT]
-        current_drive = self.measured_currents[Power.JACKAL_DRIVE_CURRENT]
-        current_user = self.measured_currents[Power.JACKAL_USER_CURRENT]
-        current_total = self.measured_currents[Power.JACKAL_TOTAL_CURRENT]
+        current_computer = self.measured_currents[Power.J100_COMPUTER_CURRENT]
+        current_drive = self.measured_currents[Power.J100_DRIVE_CURRENT]
+        current_user = self.measured_currents[Power.J100_USER_CURRENT]
+        current_total = self.measured_currents[Power.J100_TOTAL_CURRENT]
 
         if current_total > 32.0:
             stat.summary(DiagnosticStatus.ERROR, 'Current draw critical.')
