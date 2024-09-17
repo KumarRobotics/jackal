@@ -26,8 +26,8 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(
                 PathJoinSubstitution(
                     [FindPackageShare('jackal_description'),
-                     'launch',
-                     'description.launch.py']
+                    'launch',
+                    'description.launch.py']
                 )
             ),
             launch_arguments=[('robot_description_command', robot_description_command)]
@@ -70,12 +70,12 @@ def generate_launch_description():
         ),
 
         # Wireless Watcher
-        #IncludeLaunchDescription(
-        #    PythonLaunchDescriptionSource(PathJoinSubstitution(
-        #        [FindPackageShare('wireless_watcher'), 'launch', 'watcher.launch.py']
-        #    )),
-        #    launch_arguments=[('connected_topic', 'wifi_connected')]
-        #),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(PathJoinSubstitution(
+                [FindPackageShare('wireless_watcher'), 'launch', 'watcher.launch.py']
+            )),
+            launch_arguments=[('connected_topic', 'wifi_connected')]
+        ),
 
         # MicroROS Agent
         Node(
